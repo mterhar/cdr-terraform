@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: coder-certs
+  namespace: coder # Your Coder deployment namespace
+spec:
+  commonName: "*.dev.pentest.coderworkshop.com"
+  dnsNames:
+    - "coder.pentest.coderworkshop.com"
+    - "*.dev.pentest.coderworkshop.com"
+  issuerRef:
+    kind: Issuer
+    name: letsencrypt
+  secretName: coder-certs
