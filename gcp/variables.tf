@@ -1,5 +1,6 @@
 // variable declarations
 variable "region" {}
+variable "zone" {}
 variable "project_id" {}
 variable "name" {}
 variable "disk_size_gb" {}
