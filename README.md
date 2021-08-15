@@ -1,5 +1,11 @@
-# Deploying Coder via Terraform
+# Deploying Coder via Terraform [for pentest]
 
+This repository is the deployment used to create the 3rd party penetration testing kubernetes cluster and coder deployment. This
+
+If you're looking for a coder terraform installation, check the original at: https://github.com/ericpaulsen/cdr-terraform
+
+
+## Original README.md follows
 These Terraform scripts automate Coder's installation and the provisioning of its necessary infrastructure on the major cloud providers (AWS coming soon).
 You can use this repo to quickly deploy Coder, or as a template for a custom Coder installation.
 
@@ -38,6 +44,7 @@ You are expected to change these values accordingly.
 1. `cd` into your cloud provider directory
 1. Run `terraform init` to initialize Terraform
 1. Define your variables in the `terraform.tfvars` file
+1. [login to gcloud](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/getting_started#adding-credentials) and put creds in `GOOGLE_APPLICATION_CREDENTIALS` environment var
 1. Run `terraform plan` to view the resources Terraform will create
 1. Run `terraform apply` to provision such resources & install Coder
 
